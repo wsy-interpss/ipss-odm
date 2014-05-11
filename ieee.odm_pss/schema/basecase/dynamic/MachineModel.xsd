@@ -8,6 +8,7 @@
     <ns:include schemaLocation="../../common/DataType.xsd" />
     <ns:include schemaLocation="exc/IEEEExciterModel.xsd" />
     <ns:include schemaLocation="exc/BPAExciterModel.xsd" />
+    <ns:include schemaLocation="exc/PSASPExciterModel.xsd" />
     <ns:include schemaLocation="gov/IEEEGovernorModel.xsd" />
     <ns:include schemaLocation="gov/BPAGovernorModel.xsd" />
     <ns:include schemaLocation="gov/PSSEGovernorModel.xsd" />

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ns:schema 
+	xmlns:ns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:pss="http://www.ieee.org/odm/Schema/2008"
+	targetNamespace="http://www.ieee.org/odm/Schema/2008" 
+	elementFormDefault="qualified" >
+
+
+	<ns:include schemaLocation="../../../common/DataType.xsd" />
+
+    <ns:include schemaLocation="ExciterModel.xsd" />
+
+	<ns:element name="excPSASPType1" substitutionGroup="pss:exciter" type="pss:ExcPSASPType1XmlType" />
+	
+	 <ns:complexType name="ExcPSASPType1XmlType">
+		<ns:complexContent>
+			<ns:extension base="pss:ExciterModelXmlType">
+				<ns:sequence>
+				    <ns:element maxOccurs="1" minOccurs="1" name="KR" type="ns:double" />
+					<ns:element maxOccurs="1" minOccurs="1" name="TR" type="pss:TimePeriodXmlType" />
+					<ns:element maxOccurs="1" minOccurs="1" name="KA" type="ns:double" />
+					<ns:element maxOccurs="1" minOccurs="1" name="TA" type="pss:TimePeriodXmlType" />
+					<ns:element maxOccurs="1" minOccurs="1" name="KE" type="ns:double" />
+					<ns:element maxOccurs="1" minOccurs="1" name="TE" type="pss:TimePeriodXmlType" />
+					<ns:element maxOccurs="1" minOccurs="1" name="KF" type="ns:double" />
+					<ns:element maxOccurs="1" minOccurs="1" name="TF" type="pss:TimePeriodXmlType" />
+					<ns:element maxOccurs="1" minOccurs="1" name="EFDMIN" type="ns:double" />
+					<ns:element maxOccurs="1" minOccurs="1" name="EFDMAX" type="ns:double" />
+				</ns:sequence>
+			</ns:extension>
+		</ns:complexContent>
+	</ns:complexType>
+</ns:schema>

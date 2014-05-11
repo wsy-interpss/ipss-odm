@@ -65,6 +65,7 @@ import org.ieee.odm.schema.ExcIEEE1992TypeAC1AXmlType;
 import org.ieee.odm.schema.ExcIEEE2005TypeST3AXmlType;
 import org.ieee.odm.schema.ExcIEEE2005TypeST4BXmlType;
 import org.ieee.odm.schema.ExcIEEEModified1968Type1XmlType;
+import org.ieee.odm.schema.ExcPSASPType1XmlType;
 import org.ieee.odm.schema.ExcSimpleTypeXmlType;
 import org.ieee.odm.schema.ExcTSATTypeEXC34XmlType;
 import org.ieee.odm.schema.GovBPAGiGaTbCombinedModelXmlType;
@@ -606,6 +607,19 @@ public class DStabParserHelper extends AcscParserHelper {
 			DStabGenDataXmlType gen) {
 		ExcBPAFVXmlType exc = OdmObjFactory.createExcBPAFVXmlType();
 		gen.setExciter(OdmObjFactory.createExcBPATypeFV(exc));
+		return exc;
+	}
+	
+	/**
+	 * create Exc model record of type PSASPtype1
+	 * 
+	 * @param gen
+	 * @return
+	 */
+	public static ExcPSASPType1XmlType createExcPSASPType1XmlType(
+			DStabGenDataXmlType gen) {
+		ExcPSASPType1XmlType exc = OdmObjFactory.createExcPSASPType1XmlType();
+		gen.setExciter(OdmObjFactory.createExcPSASPType1(exc));
 		return exc;
 	}
 	
