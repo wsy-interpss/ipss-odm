@@ -77,6 +77,7 @@ import org.ieee.odm.schema.GovHydroXmlType;
 import org.ieee.odm.schema.GovIEEE1981Type1XmlType;
 import org.ieee.odm.schema.GovIEEE1981Type2XmlType;
 import org.ieee.odm.schema.GovIEEE1981Type3XmlType;
+import org.ieee.odm.schema.GovPSASPType1ModelXmlType;
 import org.ieee.odm.schema.GovPSSEGASTModelXmlType;
 import org.ieee.odm.schema.GovPSSEIEESGOModelXmlType;
 import org.ieee.odm.schema.GovPSSETGOV1ModelXmlType;
@@ -822,6 +823,15 @@ public class DStabParserHelper extends AcscParserHelper {
 		
 	}
 	
+	//****************************************************************************
+	// The following are PSASP Governor models, including speedGov and turbine 
+	//*****************************************************************************
+	
+	public static GovPSASPType1ModelXmlType createGovPSASPType1ModelXmlType(DStabGenDataXmlType gen) {
+		GovPSASPType1ModelXmlType tgov1=OdmObjFactory.createGovPSASPType1ModelXmlType();
+		gen.setGovernor(OdmObjFactory.createGovPSASPType1(tgov1));
+		return tgov1;
+	}
 	
 	
 	//****************************************************************************
@@ -1100,4 +1110,6 @@ public class DStabParserHelper extends AcscParserHelper {
 		gen.setStabilizer(OdmObjFactory.createPssBPASp(pss));
 		return pss;
 	}
+
+	
 }

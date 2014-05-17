@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ns:schema 
+	xmlns:ns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:pss="http://www.ieee.org/odm/Schema/2008"
+	targetNamespace="http://www.ieee.org/odm/Schema/2008" 
+	elementFormDefault="qualified" >
+
+	
+    <ns:include schemaLocation="../../../common/DataType.xsd" />
+    <ns:include schemaLocation="IEEEGovernorModel.xsd" />
+    
+    <ns:element name="GovPSASPType1" substitutionGroup="pss:governor" type="pss:GovPSASPType1ModelXmlType" />
+    
+    <ns:complexType name="GovPSASPType1ModelXmlType">
+		<ns:complexContent>
+		<ns:extension base="pss:GovernorModelXmlType">
+		<ns:sequence>
+		    <ns:element maxOccurs="1" minOccurs="1" name="AMAX" type="ns:double" />
+		    <ns:element maxOccurs="1" minOccurs="1" name="AMIN" type="ns:double" />
+			<ns:element maxOccurs="1" minOccurs="1" name="TS" type="pss:TimePeriodXmlType" />
+			<ns:element maxOccurs="1" minOccurs="1" name="T0" type="pss:TimePeriodXmlType" />
+			<ns:element maxOccurs="1" minOccurs="1" name="R" type="ns:double" />
+			<ns:element maxOccurs="1" minOccurs="1" name="K0" type="ns:double" />
+			<ns:element maxOccurs="1" minOccurs="1" name="K1" type="ns:double" />
+		</ns:sequence>
+		</ns:extension>
+		</ns:complexContent>		
+	</ns:complexType>
+</ns:schema>

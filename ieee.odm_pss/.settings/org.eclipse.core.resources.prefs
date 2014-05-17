@@ -7,3 +7,4 @@ encoding//src/org/ieee/odm/adapter/psse/mapper/dynamic/generator/PSSEGenrouMappe
 encoding//src/org/ieee/odm/adapter/psse/parser/aclf/PSSEGenDataParser.java=UTF-8
 encoding//src/org/ieee/odm/adapter/psse/parser/aclf/PSSEHeaderDataParser.java=UTF-8
 encoding//src/org/ieee/odm/adapter/psse/parser/aclf/PSSESwitchedShuntDataParser.java=UTF-8
+encoding//src/org/ieee/odm/adapter/psse/parser/dynamic/generator/PSSEGenrouDataParser.java=UTF-8
